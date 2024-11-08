@@ -1,0 +1,293 @@
+/***Start-GLOBAL***/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "mont-400";
+    src: url(../Fonts/static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "mont-500";
+    src: url(../Fonts/static/Montserrat-Regular.ttf);
+}
+
+body {
+    text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "mont-400";
+}
+
+:root {
+    --main-color: #F8F9FA;
+    --last-color: #212121;
+    --sec-color: #E65F78;
+}
+
+.padding-section {
+    padding: 70px 0px;
+}
+
+/**@@@@@ END-Global @@@@@**/
+
+/*! @@@@@@ START-Nav @@@@@@ */
+.my-nav {
+    background-color: white;
+    padding: 10px 0px;
+    font-family: 'Lucida Sans';
+    box-shadow: 0 0 3px rgba(0, 0, 0, .658);
+
+}
+
+.my-nav .nav-item .color::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 2px;
+    top: 80%;
+    left: 15%;
+    background-color: black;
+}
+
+.my-nav .nav-item .nav-link {
+    color: gray;
+    transition: all 1s;
+}
+
+.my-nav .nav-item .nav-link:hover {
+    color: var(--sec-color);
+    transition: all 0.5s;
+}
+
+.my-nav .nav-item .color {
+    color: var(--sec-color);
+}
+
+/*! @@@@@ End-Nav @@@@@ */
+
+/*? &&&&& Start-Header &&&&&  */
+#Home {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../IMG/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#Home>span {
+    font-family: 'Lucida Sans';
+    font-size: medium;
+    font-style: italic;
+}
+
+#Home .header-btn {
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: all 0.5s;
+    padding: 10px 30px;
+    color: white;
+}
+
+#Home .header-btn:hover {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+#Home .setting{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20%;
+    left: 0;
+}
+#Home .arrow{
+    width: 50px;
+    height: 50px;
+    background-color: var(--sec-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    color: white;
+    border-radius: 50%;
+}
+#Home .arrow i{
+    color: white;
+}
+#Home .anime{
+    border: 3px solid white;
+    width: 40px;
+    height: 90px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+#Home .inner{
+    background-color: white;
+    width: 8px;
+    height: 20px;
+    border-radius: 5px;
+
+}
+
+
+/*? &&&&& End-Header &&&&&  */
+
+/*^ &&&&& Start-About &&&&&  */
+#About .about-info h4>span {
+    color: var(--sec-color);
+}
+
+#About .about-icon {
+    border: 3px solid black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+#About .about-icon:hover {
+    color: var(--sec-color);
+    border-color: var(--sec-color);
+}
+
+/*^ &&&&& End-About &&&&&  */
+
+/*! &&&&& Start-Services &&&&& */
+#Services {
+    background-color: var(--main-color);
+}
+
+#Services .card .icon-services {
+    color: var(--sec-color);
+}
+
+#Services .card .icon-services::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: red;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 1s;
+}
+
+#Services .card:hover .icon-services::before {
+    width: 70px;
+}
+
+/*! &&&&& End-Services &&&&& */
+.freelance {
+    background-color: rgb(161, 159, 159);
+    color: white;
+}
+
+/*? &&&&& Start-Client &&&&& */
+
+#Client .carousel .carousel-indicators button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--sec-color);
+
+}
+
+/*? &&&&& End-Client &&&&& */
+
+/** &&&&& START-Portogilo &&&&&  */
+#Portofolio {
+    background-color: var(--main-color);
+}
+
+#Portofolio .nav .nav-link {
+    border: 2px solid transparent;
+    border-radius: 50px;
+    margin: 0px 5px;
+    color: black;
+    font-weight: bolder;
+}
+
+#Portofolio .nav .nav-link.active {
+    background-color: var(--sec-color);
+    color: white;
+}
+
+#Portofolio .layer-porto {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:all 1s;
+}
+#Portofolio .pic:hover .layer-porto {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transform: rotate(360deg);
+}
+#Portofolio .pic img{
+    transition: all 1s 0.4s;
+}
+#Portofolio .pic:hover img{
+    transform: scale(1.2);
+}
+#Portofolio .text-layer {
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 1s 0.8s;
+    color: white;
+}
+#Portofolio .pic:hover .text-layer {
+    opacity: 1;
+}
+
+
+/** &&&&& END-Portogilo &&&&&  */
+
+/*^ &&&&& Start-Blog &&&&& */
+#Blog .card-title span{
+    color: var(--sec-color);
+}
+#Blog .card img{
+    transition: all 1s;
+}
+#Blog .card:hover img{
+    transform: scale(1.2);
+
+}
+/*^ &&&&& END-Blog &&&&& */
+/*! &&&&& Strat-Contact &&&&&  */
+
+/*! &&&&& End-Contact &&&&&  */
